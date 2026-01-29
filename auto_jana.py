@@ -45,6 +45,14 @@ while(1):
 
     # check between strip.url == xpath_psswd value //
     if url_end == psswd:
+        re_jana()
+
+    # Auto filled input field 
+    else:
+        psswd_path.send_keys(url_end)
+        re_jana()
+
+    def re_jana():
         #jana pemohonan button : xpath = //*[@id="form1"]/p[1]/input
         generate = browser.find_element("xpath", '//*[@id="form1"]/p[1]/input')
         generate.click()
@@ -55,6 +63,4 @@ while(1):
         confirm_.click()
 
         time.sleep(5)
-
-
 # Landing Page > list name (10) > check substring_end == password > emulate button click (Jana Permohonan) > click (YA) > wait page reload > repeat
