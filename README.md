@@ -7,19 +7,20 @@ experimental lightweight runtime to automate request re-generate.
 ## Prerequisites
 - **Python**:  Python version >3.10 installed.
 - **Pip**: Ensure pip is installed to manage Python packages. It usually comes with Python.
+- **Selenium**: Open Source Web Driver tools & libraries.
+- **PyAutoGUI**: Automation interaction (mouse & keyboard) tools.
 
 ## Setup
 
-**required** library:
-
-1. **Selenium**:
+1. **Install Dependencies**:
 
     ```bash
-    pip install selenium
+    pip install -r requirements.txt
     ```
 
-2. **PyAutoGUI**:
+2. **run**:
 
     ```bash
-    pip install pyautogui
+    python ./auto_jana.py
     ```
+

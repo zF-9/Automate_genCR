@@ -23,7 +23,7 @@ while(1):
     pyautogui.leftClick()
 
     time.sleep(3)
-    a_name = browser.find_element("xpath", '/html/body/table/tbody/tr[3]/td/table/tbody/tr[6]/td[1]/div/span/span/a')
+    a_name = browser.find_element("xpath", '/html/body/table/tbody/tr[3]/td/table/tbody/tr[2]/td[1]/div/span/span/a')
     a_name.click()
     
     # for copying the selected url
@@ -38,20 +38,6 @@ while(1):
     url = pyperclip.paste()
     print(url)
 
-    '''
-    def re_jana():
-        #jana pemohonan button : xpath = //*[@id="form1"]/p[1]/input
-        generate = browser.find_element("xpath", '//*[@id="form1"]/p[1]/input')
-        generate.click()
-
-        time.sleep(3)
-        # confirm button : xpath = //*[@id="gonext"]/input[1]
-        confirm_ = browser.find_element("xpath", '//*[@id="gonext"]/input[1]')
-        confirm_.click()
-
-        time.sleep(5)
-    '''
-
     # idlling for copy + paste
     pyautogui.moveTo(500, 777, duration=1)
     pyautogui.leftClick()
@@ -63,8 +49,7 @@ while(1):
     _substring = '&KL='
     res = url.split(_substring, 1)
     result = res[1] if len(res) > 1 else ""
-    url_end = url[-psswd_len:]
-    print("input_password: "+ psswd + " url_end: " + result)
+    print("input_password: "+ psswd + "; url_end: " + result)
 
     psswd_path.clear()
     time.sleep(5)
@@ -75,12 +60,12 @@ while(1):
     generate = browser.find_element("xpath", '//*[@id="form1"]/p[1]/input')
     generate.click()
 
-    time.sleep(7)
+    time.sleep(5)
     # confirm button
     confirm_ = browser.find_element("xpath", '//*[@id="gonext"]/input[1]')
     confirm_.click()
 
-    time.sleep(7)
+    time.sleep(5)
     pyautogui.press('f5')
 
 
